@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDA Education - Empowering Futures</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Top bar with contact info and social icons -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="contact-info">
+                <a href="mailto:info@yourdomain.com">
+                    <i class="fas fa-envelope"></i> info@yourdomain.com
+                </a>
+                <a href="tel:+91 6261224881">
+                    <i class="fas fa-phone-alt"></i> +91 6261224881
+                </a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main navigation bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#">
+                <img src="https://ida-edu.co.in/wp-content/uploads/2020/12/png-ida-1.png" alt="Logo" class="logo">
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li>
+                    <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="file.html">IMB</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="idare.html">Register</a></li>
+                    <li><a href="Login.html">Login</a></li>
+                    <li><a href="#contact">Contact</a></li>
+        </div>
+    </nav>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link (for mobile)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
+    
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>INTERNATIONAL DESIGN ACADEMY</h1>
+                <p>Join IDA Education for world-class training and career advancement programs.</p>
+                <a href="https://ida-edu.co.in/" class="btn">Bilaspur</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About <span>IDA Education</span></h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>IDA Education is a premier institution dedicated to providing high-quality education and professional training. Our mission is to bridge the gap between academia and industry, equipping students with the skills needed for success.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Industry-Relevant Curriculum</li>
+                        <li><i class="fas fa-check"></i> Expert Faculty</li>
+                        <li><i class="fas fa-check"></i> Hands-on Training</li>
+                        <li><i class="fas fa-check"></i> Placement Assistance</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Students Learning">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- Director's Word Section -->
+    <section id="director" class="director">
+        <div class="container">
+            <div class="director-content" style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
+                <div class="director-image" style="flex: 0 0 220px;">
+                    <img src="https://ida-edu.co.in/wp-content/uploads/2021/01/ida-bil.jpg" alt="Director Photo" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 6px solid #e53935;">
+                </div>
+                <div class="director-info" style="flex: 1;">
+                    <h2>Director’s <span>Word</span></h2>
+                    <h3>Mrs. Saida Vanak</h3>
+                    <p>
+                        “The International Design Academy (IDA) is a unique Academy as it focuses on Design, Creativity, Research and design development, design intervention, marketing intervention of all sorts of Creative Arts. We at IDA are committed to impart Design Education to create design professionals of excellence to help meet India’s diverse design needs.”
+
+                    </p>
+                
+                    <ul>
+                        <li><i class="fas fa-award"></i> Ph.D. in Education Management</li>
+                        <li><i class="fas fa-briefcase"></i> 20+ Years of Experience</li>
+                        <li><i class="fas fa-users"></i> Renowned Motivational Speaker</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <h2>Our <span>Courses</span></h2>
+            <div class="course-cards">
+                <div class="card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Software Development</h3>
+                    <p>Master programming languages like Python, Java, and JavaScript with hands-on projects.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Business Analytics</h3>
+                    <p>Learn data-driven decision-making with tools like Excel, SQL, and Power BI.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Professional Certifications</h3>
+                    <p>Boost your career with globally recognized certifications in various fields.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-user"></i>
+                    <h3>Modelling Courses</h3>
+                    <p>Learn the art of modeling, including posing, runway techniques, and portfolio development.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-user-edit"></i>
+                    <h3>Fashion Styling</h3>
+                    <p>Involves creating visually appealing and contextually.Creating a trending personality.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Graphic Designing</h3>
+                    <p>Learn to create stunning visuals using tools like Adobe Photoshop, Illustrator, and InDesign.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Fine Arts</h3>
+                    <p>Explore various forms of art including painting, sculpture, and digital art.</p>
+                </div> 
+                <div class="card">
+                    <i class="fas fa-camera-retro"></i>
+                    <h3>Photography</h3>
+                    <p>Master the art of photography with courses on composition, lighting, and editing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials" style="padding: 80px 0; background: #f9f9f9; text-align: center;">
+    <div class="container">
+        <h2>Read Our <span>Testimonials</span></h2>
+        <p>See what our students and alumni say about us!</p>
+        <a href="testimonial.html" class="btn" style="margin-top: 20px;">Go to Testimonials Page</a>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in <span>Touch</span></h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <!-- <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>IDA-International Design Academy, Bilaspur Behind 13-14, Medical Complex, Jawali Nala Road, Telipara Bilaspur(C.G)-495001</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+91 9329470094</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>IMB.INDIA1111@gmail.com</p>
+                    </div>
+                </div> -->
+                <!-- Font Awesome Link (Put this in <head>) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Contact Info - Vertical Unordered List -->
+<ul class="vertical-contact-list">
+    <li>
+        <i class="fas fa-map-marker-alt"></i><br>
+        IDA-International Design Academy, Bilaspur Behind 13-14, Medical Complex, Jawali Nala Road,<br>
+        Telipara Bilaspur (C.G) - 495001
+    </li>
+    <li>
+        <i class="fas fa-phone"></i><br>
+        +91 6261224881
+    </li>
+    <li>
+        <i class="fas fa-envelope"></i><br>
+        pcc78236@gmail.com
+    </li>
+    <li>
+        <i class="fab fa-whatsapp" style="color: #25D366;"></i><br>
+        <a href="https://wa.me/919329470094" target="_blank" style="color: inherit; text-decoration: none;">
+            +91 6261224881
+        </a>
+    </li>
+</ul>
+
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+<section id="gallery" class="gallery">
+    <div class="container">
+        <h2>Our <span>Campus Gallery</span></h2>
+        <div class="gallery-grid">
+            <img src="https://ida-edu.co.in/wp-content/uploads/2021/01/centrepic1.jpg" alt="Campus 1">
+            <img src="https://ida-edu.co.in/wp-content/uploads/2021/01/centrepic4.jpg" alt="Campus 2">
+            <img src="https://ida-edu.co.in/wp-content/uploads/2021/01/centrepic-6.jpg" alt="Campus 3">
+            <img src="https://ida-edu.co.in/wp-content/uploads/2021/01/centrepic5.jpg" alt="Campus 5">
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About IDA</h3>
+                    <p>IDA Education is a leading institution providing industry-aligned education and training.</p>
+                    <div class="socials">
+                        <a href="https://www.facebook.com/imbmilano"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/imbmilano"><i class="fab fa-twitter"></i></a>
+                        <a href="https://it.linkedin.com/school/istitutodimodaburgo/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/istitutodimodaburgo/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Subscribe</h3>
+                    <p>Stay updated with our latest courses and offers.</p>
+                    <form>
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 IDA Education. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script1.js"></script>
+</body>
+</html>

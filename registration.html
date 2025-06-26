@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="re.css">
+</head>
+<body>
+    <div class="contain">
+        <img src="IDA logo.jpeg.jpg" alt="Academy Logo" class="Logo">
+    </div>
+    
+    <div class="container">
+        <h1>Registration  For International Design Academy (Student)</h1>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <div class="error" id="usernameError"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error" id="emailError"></div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <div class="error" id="passwordError"></div>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <div class="error" id="confirmPasswordError"></div>
+            </div>
+            <div class="form-group"><label for ="Gender">Gender</label><input type="radio" name = "Gender" > male
+            <input type="radio" name="Gender"> female
+            </div>
+            <div class="form-group"><label for="course">Course</label>
+            <select name="course" id="course" required>
+                <option value="" disabled selected>Select your course</option>
+                <option value="Modelling Courses">Modelling Courses</option>
+                <option value="Fashion Styling">Fashion Styling</option>
+                <option value="Graphic Designing">Graphic Designing</option>
+                <option value="Fine Arts">Fine Arts</option>
+                <option value="Photography">Photography</option></div>
+                <div class="form-group">
+                    <label for="Date-of-birth">Date of Birth</label>
+                    <input type="date" name="dob" required></div>
+                <div class="form-group">
+                    <label for="Phone">Phone no.</label>
+                    <input type="tel" name="phone" placeholder="Phone No." required></div>
+                <div class="form-group">
+                    <label for="Address">Address</label>
+                    <textarea name="address" placeholder="Address" required></textarea></div>
+                <div class="form-group"><label for="file-input">Enter a file</label><input type="file" name="File upload:" accept =".jpg, .jpeg, .png, .pdf" required></div>
+            <input type="checkbox" name="terms" required> I agree to the terms and conditions
+            <button type="submit">Register</button><a href="new.html" class="go-back-btn" style="display:inline-block;margin:20px 0 0 20px;padding:8px 18px;background:#e53935;color:#fff;text-decoration:none;border-radius:5px;font-weight:bold;">&#8592; Go Back</a>
+        </form>
+    </div>
+    <script src="re.js"></script>
+</body>
+</html>

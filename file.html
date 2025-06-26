@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDA - International Design Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary: #e83e8c;
+            --secondary: #2c3e50;
+            --light: #f8f9fa;
+            --dark: #343a40;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgb(0, 0, 0);
+            box-shadow: 0 2px 10px rgba(247, 246, 246, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .top-bar {
+            background-color: var(--secondary);
+            color: white;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .contact-info {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 16px;
+        }
+        
+        /* Navigation */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            height: 60px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            position: relative;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-weight: 600;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--dark);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #d62f7a;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Brochure Section */
+        .brochure-section {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+        
+        .brochure-container {
+            max-width: 900px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .swiper {
+            width: 100%;
+            height: 500px;
+        }
+        
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            padding: 30px;
+        }
+        
+        .swiper-slide img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .swiper-button-next, .swiper-button-prev {
+            color: var(--primary);
+        }
+        
+        .swiper-pagination-bullet-active {
+            background-color: var(--primary);
+        }
+        
+        /* Video Section */
+        .video-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .video-card {
+            background-color: var(--light);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .video-thumbnail {
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            overflow: hidden;
+        }
+        
+        .video-thumbnail img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background-color: rgba(232, 62, 140, 0.8);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        .video-info {
+            padding: 20px;
+        }
+        
+        .video-info h3 {
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+        
+        /* Courses Section */
+        .courses-section {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .courses-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .course-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .course-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .course-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .course-card:hover .course-img img {
+            transform: scale(1.1);
+        }
+        
+        .course-info {
+            padding: 20px;
+        }
+        
+        .course-info h3 {
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+        
+        .course-info ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--secondary);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+        
+        .footer-column p {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 80%;
+                height: 100vh;
+                background-color: white;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 40px 20px;
+                box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+                transition: all 0.5s ease;
+                z-index: 1001;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .swiper {
+                height: 400px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .top-bar-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .hero {
+                padding: 80px 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .swiper {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="contact-info">
+                    <a href="mailto:info@ida-edu.co.in">
+                        <i class="fas fa-envelope"></i> info@ida-edu.co.in
+                    </a>
+                    <a href="tel:+919202728738">
+                        <i class="fas fa-phone-alt"></i> +91 9202728738
+                    </a>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <a href="#">
+                    <img src="https://ida-edu.co.in/wp-content/uploads/2020/12/png-ida-1.png" alt="IDA Logo" class="logo">
+                </a>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="new.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#brochure">Brochure</a></li>
+                    <li><a href="#videos">Videos</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Welcome to the Design World</h1>
+            <p>International Design Academy offering world-class education in Fashion Design, Interior Design, Makeup Artistry, and more with international opportunities in Milan, Italy.</p>
+            <a href="#brochure" class="btn">View Brochure</a>
+        </div>
+    </section>
+    
+    <!-- Brochure Section -->
+    <section class="brochure-section" id="brochure">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Brochure</h2>
+            </div>
+            
+            <div class="brochure-container">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="https://via.placeholder.com/800x500?text=Page+1+Welcome+to+the+Design+World" alt="Brochure Page 1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://via.placeholder.com/800x500?text=Page+2+Accreditation+and+Why+IDA" alt="Brochure Page 2">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://via.placeholder.com/800x500?text=Page+3+International+Fashion+Week" alt="Brochure Page 3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://via.placeholder.com/800x500?text=Page+4+Fashion+and+Interior+Design" alt="Brochure Page 4">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://via.placeholder.com/800x500?text=Page+5+Industry+Training+and+Alumni" alt="Brochure Page 5">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://via.placeholder.com/800x500?text=Page+6+Makeup+Art+and+Graphic+Design" alt="Brochure Page 6">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://via.placeholder.com/800x500?text=Page+7+International+Tours" alt="Brochure Page 7">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://via.placeholder.com/800x500?text=Page+8+Contact+Information" alt="Brochure Page 8">
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                    
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Video Section -->
+    <section class="video-section" id="videos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Videos</h2>
+            </div>
+            
+            <div class="video-container">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Fashion Design">
+                        <div class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Fashion Design at IDA</h3>
+                        <p>Explore our world-class fashion design program and student creations.</p>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Milan Tour">
+                        <div class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Milan Educational Tour</h3>
+                        <p>See our students' experience at Milan Fashion Week.</p>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Interior Design">
+                        <div class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Interior Design Projects</h3>
+                        <p>Student projects and industry collaborations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Courses Section -->
+    <section class="courses-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Courses</h2>
+            </div>
+            
+            <div class="courses-container">
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Fashion Design">
+                    </div>
+                    <div class="course-info">
+                        <h3>Fashion Design</h3>
+                        <p>UG | PG | Diploma Programs</p>
+                        <ul>
+                            <li>BA/BSC/MA/MSC</li>
+                            <li>1/2/3 Year Diploma</li>
+                            <li>Study in Milan Opportunity</li>
+                        </ul>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Interior Design">
+                    </div>
+                    <div class="course-info">
+                        <h3>Interior Design</h3>
+                        <p>UG | PG | Diploma Programs</p>
+                        <ul>
+                            <li>BA/BSC/MA/MSC</li>
+                            <li>1/2/3 Year Diploma</li>
+                            <li>Industry Training</li>
+                        </ul>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Makeup Artistry">
+                    </div>
+                    <div class="course-info">
+                        <h3>Makeup Artistry</h3>
+                        <p>Short Term Programs</p>
+                        <ul>
+                            <li>3 Months | 6 Months</li>
+                            <li>1 Year Diploma</li>
+                            <li>Professional Certification</li>
+                        </ul>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container" id="footer">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About IDA</h3>
+                    <p>International Design Academy offering world-class education in design fields with international opportunities in Milan, Italy.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="new.html" class="go-back-btn">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Brochure</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Courses</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Fashion Design</a></li>
+                        <li><a href="#">Interior Design</a></li>
+                        <li><a href="#">Makeup Artistry</a></li>
+                        <li><a href="#">Graphic Design</a></li>
+                        <li><a href="#">Photography</a></li>
+                        <li><a href="#">Fine Arts</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Behind 13-14 Medical Complex, Telipara, Jawali Nala Road, Bilaspur (Chhattisgarh)</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 6261224881 | +91 9202728738</p>
+                    <p><i class="fas fa-envelope"></i> info@ida-edu.co.in</p>
+                    <p><i class="fas fa-globe"></i> www.ida-edu.co.in</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 International Design Academy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Initialize Swiper
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+        
+        // Video Play Functionality
+        document.querySelectorAll('.play-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // In a real implementation, this would open a modal with the video
+                alert('Video player would open here. In a real implementation, this would show a YouTube/Vimeo embed.');
+            });
+        });
+    </script>
+</body>
+</html>

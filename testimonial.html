@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IDA Education - Testimonials</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    h1 {
+      text-align: center;
+      color: #1d4ed8;
+      margin-bottom: 0.5rem;
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    .subtitle {
+      text-align: center;
+      color: #555;
+      margin-bottom: 2.5rem;
+      font-size: 1.2rem;
+    }
+    .testimonials-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .testimonial-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px #1d4ed81a;
+      padding: 2rem 1.5rem 1.5rem 1.5rem;
+      max-width: 340px;
+      min-width: 260px;
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 32px #1d4ed833;
+    }
+    .avatar-circle {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: #e0e7ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      color: #1d4ed8;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      border: 3px solid #1d4ed8;
+      box-shadow: 0 2px 12px #1d4ed822;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      user-select: none;
+    }
+    .name {
+      font-weight: 700;
+      color: #1d4ed8;
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+      letter-spacing: 0.5px;
+    }
+    .stars {
+      color: #fbbf24;
+      margin-bottom: 0.7rem;
+      font-size: 1.1rem;
+    }
+    .review {
+      color: #333;
+      font-size: 1.05rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+    @media (max-width: 900px) {
+      .testimonials-grid { flex-direction: column; align-items: center; }
+      .testimonial-card { max-width: 95vw; }
+    }
+    .back-btn {
+      display: inline-block;
+      margin: 2rem auto 0 auto;
+      padding: 0.7rem 1.5rem;
+      background: #1d4ed8;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.08rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 2px 16px #1d4ed822;
+      transition: background 0.3s;
+      text-align: center;
+    }
+    .back-btn:hover {
+      background: #2563eb;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Student & Alumni Testimonials</h1>
+    <div class="subtitle">Hear from our learners about their experience at IDA Education.</div>
+    <div class="testimonials-grid">
+      <!-- Testimonial Card 1 -->
+      <div class="testimonial-card">
+        <div class="avatar-circle">
+          <svg viewBox="0 0 100 100" width="60" height="60">
+            <defs>
+              <linearGradient id="avatarGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#bfc2c7"/>
+                <stop offset="100%" stop-color="#6d6f73"/>
+              </linearGradient>
+            </defs>
+            <circle cx="50" cy="50" r="48" fill="url(#avatarGradient)" />
+            <circle cx="50" cy="40" r="20" fill="#fff"/>
+            <ellipse cx="50" cy="75" rx="28" ry="18" fill="#fff"/>
+          </svg>
+        </div>
+        <div class="name">Amit Sharma</div>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <div class="review">
+          The faculty at IDA Education is outstanding! The hands-on training and real-world projects helped me land my dream job in software development.
+        </div>
+      </div>
+      <!-- Testimonial Card 2 -->
+      <div class="testimonial-card">
+        <div class="avatar-circle">
+          <svg viewBox="0 0 100 100" width="60" height="60">
+            <defs>
+              <linearGradient id="avatarGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#bfc2c7"/>
+                <stop offset="100%" stop-color="#6d6f73"/>
+              </linearGradient>
+            </defs>
+            <circle cx="50" cy="50" r="48" fill="url(#avatarGradient)" />
+            <circle cx="50" cy="40" r="20" fill="#fff"/>
+            <ellipse cx="50" cy="75" rx="28" ry="18" fill="#fff"/>
+          </svg>
+        </div>
+        <div class="name">Priya Verma</div>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="review">
+          I loved the supportive environment and the placement assistance. The business analytics course was very practical and up-to-date.
+        </div>
+      </div>
+      <!-- Testimonial Card 3 -->
+      <div class="testimonial-card">
+        <div class="avatar-circle">
+          <svg viewBox="0 0 100 100" width="60" height="60">
+            <defs>
+              <linearGradient id="avatarGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#bfc2c7"/>
+                <stop offset="100%" stop-color="#6d6f73"/>
+              </linearGradient>
+            </defs>
+            <circle cx="50" cy="50" r="48" fill="url(#avatarGradient)" />
+            <circle cx="50" cy="40" r="20" fill="#fff"/>
+            <ellipse cx="50" cy="75" rx="28" ry="18" fill="#fff"/>
+          </svg>
+        </div>
+        <div class="name">Rahul Mehta</div>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="review">
+          The curriculum is industry-relevant and the trainers are very knowledgeable. I highly recommend IDA to anyone looking to upskill.
+        </div>
+      </div>
+      <!-- Testimonial Card 4 -->
+      <div class="testimonial-card">
+        <div class="avatar-circle">
+          <svg viewBox="0 0 100 100" width="60" height="60">
+            <defs>
+              <linearGradient id="avatarGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#bfc2c7"/>
+                <stop offset="100%" stop-color="#6d6f73"/>
+              </linearGradient>
+            </defs>
+            <circle cx="50" cy="50" r="48" fill="url(#avatarGradient)" />
+            <circle cx="50" cy="40" r="20" fill="#fff"/>
+            <ellipse cx="50" cy="75" rx="28" ry="18" fill="#fff"/>
+          </svg>
+        </div>
+        <div class="name">Sneha Reddy</div>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <div class="review">
+          The campus is beautiful and the learning experience was amazing. I gained confidence and skills for my career.
+        </div>
+      </div>
+      <!-- Testimonial Card 5 -->
+      <div class="testimonial-card">
+        <div class="avatar-circle">
+          <svg viewBox="0 0 100 100" width="60" height="60">
+            <defs>
+              <linearGradient id="avatarGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#bfc2c7"/>
+                <stop offset="100%" stop-color="#6d6f73"/>
+              </linearGradient>
+            </defs>
+            <circle cx="50" cy="50" r="48" fill="url(#avatarGradient)" />
+            <circle cx="50" cy="40" r="20" fill="#fff"/>
+            <ellipse cx="50" cy="75" rx="28" ry="18" fill="#fff"/>
+          </svg>
+        </div>
+        <div class="name">Vikram Singh</div>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="review">
+          The professional certifications offered here are recognized by top companies. The guidance I received was invaluable.
+        </div>
+      </div>
+      <!-- Testimonial Card 6 -->
+      <div class="testimonial-card">
+        <div class="avatar-circle">
+          <svg viewBox="0 0 100 100" width="60" height="60">
+            <defs>
+              <linearGradient id="avatarGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#bfc2c7"/>
+                <stop offset="100%" stop-color="#6d6f73"/>
+              </linearGradient>
+            </defs>
+            <circle cx="50" cy="50" r="48" fill="url(#avatarGradient)" />
+            <circle cx="50" cy="40" r="20" fill="#fff"/>
+            <ellipse cx="50" cy="75" rx="28" ry="18" fill="#fff"/>
+          </svg>
+        </div>
+        <div class="name">Anjali Patel</div>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <div class="review">
+          I appreciated the focus on practical skills and the friendly atmosphere. IDA Education truly cares about student success!
+        </div>
+      </div>
+    </div>
+    <a href="new.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+  </div>
+</body>
+</html>
